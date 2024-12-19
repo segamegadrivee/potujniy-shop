@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід/Реєстрація - ПОТУЖНИЙ ШОП</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ПОТУЖНИЙ ШОП</div>
+                <div class="nav-links">
+                    <a href="/static/index.html">Головна</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="neew.html">Новинки</a>
+                    <a href="sale.html">Знижки</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="auth">
+            <div class="container">
+                <div class="auth-forms">
+                    <div class="auth-form login-form active">
+                        <h2>Вхід</h2>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="login-email">Електронна пошта</label>
+                                <input type="email" id="login-email" name="email" placeholder="Введіть вашу електронну пошту" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Пароль</label>
+                                <input type="password" id="login-password" name="password" placeholder="Введіть ваш пароль" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Увійти</button>
+                            <p>Немає облікового запису? <a href="#register" class="switch-to-register">Зареєструватися</a></p>
+                        </form>
+                    </div>
+
+                    <div class="auth-form register-form">
+                        <h2>Реєстрація</h2>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="register-name">Ім'я</label>
+                                <input type="text" id="register-name" name="name" placeholder="Введіть ваше ім'я" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-email">Електронна пошта</label>
+                                <input type="email" id="register-email" name="email" placeholder="Введіть вашу електронну пошту" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-password">Пароль</label>
+                                <input type="password" id="register-password" name="password" placeholder="Введіть ваш пароль" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Зареєструватися</button>
+                            <p>Вже маєте обліковий запис? <a href="#login" class="switch-to-login">Увійти</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 ПОТУЖНИЙ ШОП. Усі права захищені.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.switch-to-register').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.login-form').classList.remove('active');
+            document.querySelector('.register-form').classList.add('active');
+        });
+
+        document.querySelector('.switch-to-login').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.register-form').classList.remove('active');
+            document.querySelector('.login-form').classList.add('active');
+        });
+    </script>
+</body>
+</html>

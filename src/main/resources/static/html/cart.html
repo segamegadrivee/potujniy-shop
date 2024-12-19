@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик - ПОТУЖНИЙ ШОП</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ПОТУЖНИЙ ШОП</div>
+                <div class="nav-links">
+                    <a href="../index.html">Головна</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="neew.html">Новинки</a>
+                    <a href="sale.html">Знижки</a>
+                    <a href="cart.html" class="active">Кошик</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="cart">
+            <div class="container">
+                <h2>Ваш кошик</h2>
+                <div class="cart-content">
+                    <!-- Якщо є товари в кошику -->
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="/imag/tshirt.jpg" alt="Сорочка біла" class="cart-item-image">
+                            <div class="cart-item-details">
+                                <h3>Сорочка біла</h3>
+                                <p>Ціна: <span class="price">999 ₴</span></p>
+                                <label for="quantity1">Кількість:</label>
+                                <input type="number" id="quantity1" name="quantity1" value="1" min="1">
+                            </div>
+                            <button class="remove-item">Видалити</button>
+                        </div>
+
+                        <div class="cart-item">
+                            <img src="/imag/jeans.jpg" alt="Джинси класичні" class="cart-item-image">
+                            <div class="cart-item-details">
+                                <h3>Джинси класичні</h3>
+                                <p>Ціна: <span class="price">1299 ₴</span></p>
+                                <label for="quantity2">Кількість:</label>
+                                <input type="number" id="quantity2" name="quantity2" value="1" min="1">
+                            </div>
+                            <button class="remove-item">Видалити</button>
+                        </div>
+
+                        <div class="cart-summary">
+                            <h3>Загалом</h3>
+                            <p>Сума: <span class="total-price">2298 ₴</span></p>
+                            <button class="btn btn-primary">Оформити замовлення</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 ПОТУЖНИЙ ШОП. Усі права захищені.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
